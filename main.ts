@@ -12,6 +12,8 @@ Color = neopixel.colors(NeoPixelColors.Blue)
 Direction2 = 1
 basic.forever(function () {
     Pixel.setPixelColor(Item, Color)
+    Pixel.setPixelColor((Item + 8) % 24, Color)
+    Pixel.setPixelColor((Item + 16) % 24, Color)
     Item += Direction2
     Item = Item % 24
     if (Item < 0) {
